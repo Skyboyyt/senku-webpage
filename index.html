@@ -10,18 +10,18 @@
 <body>
     <header>
         <div class="header-top">
-        <h1 id="welcome">Welcome to skyboy web page</h1>
+            <h1 id="welcome">Welcome to skyboy web page</h1>
 
-        <!--HAMBURGER BUTTON-->
-        <button class="hamburger" id="hamburger"
-        aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        </button>
+            <!-- HAMBURGER BUTTON -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
-        <!-- NAVIGATION MENU LINK -->
-         <nav class="nav-menu" id="nav-menu">
+
+        <!-- NAVIGATION MENU LINKS -->
+        <nav class="nav-menu" id="nav-menu">
             <ul>
                 <li><a href="#home">about me</a></li>
                 <li><a href="#skills-section">skills</a></li>
@@ -29,7 +29,7 @@
                 <li><a href="#projects">projects</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
-         </nav>
+        </nav>
     </header>
 
     <p id="intro">ASPIRING FULL-STACK DEVELOPER</p>
@@ -117,15 +117,16 @@
             <p>&copy; 2026 Fahad Sani. All rights reserved.</p>
         </footer>
     </main>
+
     <!-- TOGGLE MENU SCRIPT -->
-     <script>
+    <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
         hamburger.addEventListener('click', () => { 
             hamburger.classList.toggle('active');
-            navmenu.classList.toggle('active');
+            navMenu.classList.toggle('active'); // Fixed variable casing here!
         });
-        </script>
+    </script>
 </body>
 </html>

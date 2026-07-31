@@ -1,8 +1,12 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}/* Global Body Styles */
+}
+
 body {
     min-height: 100vh;
     background-color: rgb(230, 245, 240);
@@ -18,17 +22,18 @@ header {
     text-align: center;
 }
 
+/* Reduced size & padding to align with hamburger menu */
 #welcome {
     display: inline-block;
-    margin-top: 25px;
     background-color: darkblue;
     color: white;
-    padding: 12px 24px;
-    border-radius: 12px;
-    font-size: 28px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 18px;
     font-weight: bold;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    max-width: 95%;
+    max-width: 80%;
+    margin: 0;
 }
 
 #intro {
@@ -40,7 +45,7 @@ header {
 
 .profile-picture {
     width: 100px;
-    height: 100px; /* Square dimensions work best with 50% border radius */
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -62,6 +67,66 @@ p {
     box-shadow: 0px 4px 12px rgb(58, 54, 54);
 }
 
+/* ==========================================================================
+   2. DESKTOP HEADER & NAVIGATION STYLES
+   ========================================================================== */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+/* Hide hamburger button by default on desktop screen */
+.hamburger {
+    display: none;
+    background: darkblue;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Desktop horizontal nav links */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 10px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: darkblue;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.nav-menu a:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* ==========================================================================
+   3. CONTAINERS & CARDS
+   ========================================================================== */
 .skills {
     background-color: darkblue;
     display: inline-block;
@@ -121,11 +186,14 @@ p {
     font-size: 16px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
-/* Mobile Optimizations for screens smaller than 600px */
+
+/* ==========================================================================
+   4. MOBILE HAMBURGER & RESPONSIVE QUERY
+   ========================================================================== */
 @media (max-width: 600px) {
     #welcome {
-        font-size: 22px;
-        padding: 10px 18px;
+        font-size: 15px;
+        padding: 8px 12px;
     }
 
     #hello {
@@ -147,78 +215,49 @@ p {
         margin: 12px auto;
         padding: 12px 0;
     }
+
+    /* Displays the hamburger button on mobile screens */
+    .hamburger {
+        display: block !important; 
+    }
+
+    /* Navigation dropdown hidden on mobile until toggled */
+    .nav-menu {
+        display: none; 
+        width: 90%;
+        margin: 10px auto;
+        background-color: beige;
+        border: 1px solid rgba(200, 200, 200, 0.959);
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Shows menu container when toggled open by JS */
+    .nav-menu.active {
+        display: block !important; 
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 100%;
+    }
+
+    /* Morph hamburger lines into an 'X' icon when active */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
-
-.header-top {display: flex;
-justify-content: space-between;
-align-items: center;
-max-width: 800px;
-margin: 0px;
-padding: 10px;}
-
-/* hide hamburger button by dafault on desktop screen */
-.hamburger {display: none;
-background: darkblue;
-border: none;
-cursor: pointer;
-padding: 10px;
-border-radius: 8px;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);}
-
-.bar {display: block;
-width: 25px;
-height: 3px;
-margin: 5px auto;
-background-color: white;
-border-radius: 2px;
-transition: all 0.3s ease-in-out;}
-
-/*desktop horizontal nav links */
-.nav-menu ul {list-style: none;
-display: flex;
-justify-content: center;
-gap: 15px;
-padding: 15px 10px;}
-
-.nav-menu a {text-decoration: none;
-font-weight: bold;
-color: darkblue;
-padding: 8px 14px;
-border-radius: 8px;
-background-color: rgba(255, 255, 255, 0.6);
-transition: background-color 0.2s, transform 0.2s;}
-
-.nav-menu a:hover {background-color: darkblue;
-color: white;}
-
-/* MOBILE HAMBURGER TRIGGER (insdie @media screen query) */
-@media (max-width: 600px) {
-    .hamburger {display: block; /* displays the button on mobile screens */}
-
-    .nav-menu {display: none; /*hidden on mobile until toggled */
-width: 90%;
-margin: 10px auto;
-background-color: beige;
-border: 1px solid rgba(200, 200, 200, 0.959);
-border-radius: 8px;
-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.nav-menu.active {display: block; /*shows menu when toggled open by JS */}
-
-.nav-menu ul {flex-direction: column;
-gap: 10px;
-padding: 15px;}
-
-.nav-menu a {display: block;
-width: 100%;}
-
-/* morph hamburger into an 'x' icon when active */
-.hamburger.active .bar:nth-child(2) {opacity: 0;}
-
-.hamburger.active .bar:nth-child(1) {transform: translate(8px) rotate(45deg);}
-
-.hamburger.active .bar:nth-child(3) {transform: translate(-8px) rotate(-45deg);}
-
-
-
