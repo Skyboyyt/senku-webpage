@@ -20,6 +20,7 @@ header {
 
 #welcome {
     display: inline-block;
+    margin-top: 25px;
     background-color: darkblue;
     color: white;
     padding: 12px 24px;
