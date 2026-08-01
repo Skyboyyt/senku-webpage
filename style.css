@@ -46,16 +46,18 @@ header {
     text-align: center;
 }
 
+/* Header Title Banner (Increased size slightly) */
 #welcome {
     display: inline-block;
     background-color: var(--header-bg);
     color: var(--header-text);
-    padding: 6px 12px;
+    padding: 7px 14px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 19px;
     font-weight: bold;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin: 0 auto;
 }
 
 #intro {
@@ -80,12 +82,15 @@ p {
     text-align: center;
 }
 
+/* Reduced size for 'hello am senku | skyboy' banner */
 #hello {
     display: inline-block;
     background-color: blueviolet;
     color: white;
-    padding: 10px 20px;
-    border-radius: 12px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
     box-shadow: 0px 4px 12px rgb(58, 54, 54);
 }
 
@@ -94,17 +99,20 @@ p {
    ========================================================================== */
 .header-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 10px 12px;
+    padding: 10px 15px;
+    position: relative;
 }
 
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 6px; /* Compact spacing between theme and hamburger buttons */
+    gap: 6px;
+    position: absolute;
+    right: 15px;
 }
 
 /* Theme Toggle Button */
@@ -112,9 +120,9 @@ p {
     background: var(--header-bg);
     color: var(--header-text);
     border: none;
-    font-size: 14px; /* Reduced font icon size */
+    font-size: 14px;
     cursor: pointer;
-    padding: 6px 8px; /* Compact padding */
+    padding: 6px 8px;
     border-radius: 6px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -125,16 +133,15 @@ p {
     background: var(--header-bg);
     border: none;
     cursor: pointer;
-    padding: 6px 8px; /* Compact padding to match theme button height */
+    padding: 6px 8px;
     border-radius: 6px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Scaled-down hamburger bars */
 .bar {
     display: block;
-    width: 18px; /* Reduced bar width */
-    height: 2px;  /* Slightly thinner bars */
+    width: 18px;
+    height: 2px;
     margin: 4px auto;
     background-color: white;
     border-radius: 2px;
@@ -232,14 +239,21 @@ p {
    4. MOBILE HAMBURGER & RESPONSIVE QUERY
    ========================================================================== */
 @media (max-width: 600px) {
+    .header-top {
+        justify-content: center;
+    }
+
+    /* Mobile header title (Increased size slightly) */
     #welcome {
-        font-size: 14px;
-        padding: 6px 10px;
+        font-size: 16px;
+        padding: 7px 12px;
         max-width: 65%;
     }
 
+    /* Mobile hello banner (Reduced size) */
     #hello {
-        font-size: 18px;
+        font-size: 15px;
+        padding: 6px 14px;
     }
 
     p {
@@ -287,7 +301,6 @@ p {
         width: 100%;
     }
 
-    /* Adjusted 'X' transformation for smaller bar height */
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
