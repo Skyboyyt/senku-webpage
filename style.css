@@ -46,14 +46,14 @@ header {
     text-align: center;
 }
 
-/* Header Title Banner (Desktop) */
+/* Restored Header Title Banner to normal size */
 #welcome {
     display: inline-block;
     background-color: var(--header-bg);
     color: var(--header-text);
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 17px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 22px;
     font-weight: bold;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -106,10 +106,12 @@ p {
     position: relative;
 }
 
+/* Controls container stacked vertically on the far right */
 .header-controls {
     display: flex;
+    flex-direction: column; /* Places theme button UNDER hamburger */
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     position: absolute;
     right: 15px;
 }
@@ -119,9 +121,9 @@ p {
     background: var(--header-bg);
     color: var(--header-text);
     border: none;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
-    padding: 6px 8px;
+    padding: 4px 8px;
     border-radius: 6px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -242,12 +244,11 @@ p {
         justify-content: center;
     }
 
-    /* Scaled down mobile header to 14px with slim padding */
+    /* Normal readable size for mobile title */
     #welcome {
-        font-size: 14px;
-        padding: 5px 10px;
-        max-width: 58%;
-        white-space: nowrap; /* Prevents awkward line wraps on small screens */
+        font-size: 18px;
+        padding: 8px 14px;
+        max-width: 70%;
     }
 
     #hello {
