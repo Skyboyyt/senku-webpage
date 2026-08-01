@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senku | Skyboy Portfolio</title>
-    <!-- Google Font for sleek typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>senku | skyboy</title>
 </head>
 
 <body>
     <header>
         <div class="header-top">
-            <h1 id="welcome">Welcome to Skyboy Web</h1>
+            <h1 id="welcome">Welcome to skyboy web page</h1>
 
             <div class="header-controls">
+                <!-- DARK / LIGHT MODE BUTTON -->
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
 
+                <!-- HAMBURGER BUTTON -->
                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -27,113 +25,107 @@
             </div>
         </div>
 
+        <!-- NAVIGATION MENU LINKS -->
         <nav class="nav-menu" id="nav-menu">
             <ul>
-                <li><a href="#home">About Me</a></li>
-                <li><a href="#skills-section">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">about me</a></li>
+                <li><a href="#skills-section">skills</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <p id="intro">ASPIRING FULL-STACK DEVELOPER</p>
+    <p id="intro">ASPIRING FULL-STACK DEVELOPER</p>
 
-        <main>
-            <section id="home" class="card">
-                <div class="hello-container"> 
-                    <h2 id="hello">Hello, I'm Senku | Skyboy</h2> 
-                </div>
-             
-                <div class="profile-header">
-                    <img src="profile.jpg" alt="Fahad Sani Profile Picture" class="profile-picture">
-                    <div class="bio-text">
-                        <p>My name is <strong>Fahad Sani</strong>, also known as <strong>Senku</strong> or <strong>Skyboy</strong>.</p>
-                        <p>I am an aspiring full-stack developer with a passion for building modern, responsive, and user-friendly web applications.</p>
-                        <p>I enjoy learning new technologies, solving real-world problems through code, and continuously refining my engineering craft.</p>
-                        <p>My ultimate goal is to build innovative digital solutions that deliver high impact and seamless user experiences.</p>
-                    </div>
-                </div>
-            </section>
+    <main>
+        <section id="home">
+            <div class="hello-container"> 
+                <h2 id="hello">hello am senku | skyboy</h2> 
+            </div>
+         
+            <h2>About Me</h2>
+            <div class="boxes">
+                <img src="profile.jpg" alt="profile picture" class="profile-picture">
+                <p>My name is Fahad Sani, also known as Senku or Skyboy.</p>
+                <p>I am an aspiring full-stack developer with a passion for building modern, responsive, and user-friendly websites.</p>
+                <p>I enjoy learning new technologies, solving real-world problems through code, and improving my skills every day.</p>
+                <p>My goal is to become a professional software developer who creates innovative digital solutions that make a positive impact.</p>
+                <p>Every project I build helps me grow as a developer and brings me one step closer to achieving that vision.</p>
+            </div>
+        </section>
 
-            <section id="skills-section">
-                <h2 class="section-title">Technical Skills</h2>
-                
-                <div class="grid-2">
-                    <div class="box">
-                        <h3 class="skill-category">Frontend</h3>
-                        <ul class="tag-list">
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>React</li>
-                        </ul>
-                    </div>
-
-                    <div class="box">
-                        <h3 class="skill-category">Backend</h3>
-                        <ul class="tag-list">
-                            <li>Node.js</li>
-                            <li>Express.js</li>
-                            <li>MongoDB</li>
-                            <li>REST APIs</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="portfolio" class="card">
-                <h2 class="section-title">Featured Project</h2>
-                <div class="project-content">
-                    <h3>Personal Developer Portfolio</h3>
-                    <p>The interactive website you are currently exploring! Built from scratch using modern semantic HTML5, custom CSS styling with mobile-first responsiveness, and vanilla JavaScript interactivity.</p>
-                </div>
-            </section>
-
-            <section id="projects" class="card">
-                <h2 class="section-title">Upcoming Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <h4>🌤️ Weather App</h4>
-                        <p>Live meteorological updates using third-party APIs.</p>
-                    </div>
-                    <div class="project-card">
-                        <h4>📝 Task Manager</h4>
-                        <p>Productivity tool featuring dynamic state tracking.</p>
-                    </div>
-                    <div class="project-card">
-                        <h4>📊 Crypto Dashboard</h4>
-                        <p>Real-time digital asset tracking and graphical feeds.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="learning" class="card">
-                <h2 class="section-title">Learning Journey</h2>
-                <p>Started with foundational web standards (HTML & CSS) to build pristine interfaces. Now expanding into full-stack development using Node.js and dynamic front-end frameworks to build modern web solutions.</p>
-            </section>
-
-            <div class="cta-container">
-                <a href="#contact" class="hire-btn">Let's Connect</a>
+        <section id="skills-section">
+            <h2 class="skills">Skills</h2>
+            
+            <h3 class="frontend">Frontend</h3>
+            <div class="box">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>React</p>
             </div>
 
-            <footer id="contact" class="card">
-                <h2 class="section-title">Get In Touch</h2>
-                <p>Email: <a href="mailto:fahadsani440@gmail.com" class="contact-link">fahadsani440@gmail.com</a></p>
-                <div class="social-links">
-                    <a href="https://x.com/skyboy098?s=11" target="_blank" class="social-btn">X (Twitter)</a>
-                    <a href="https://wa.me/2347030863968" target="_blank" class="whatsapp-btn">WhatsApp Me</a>
-                </div>
-                <p class="copyright">&copy; 2026 Fahad Sani. All rights reserved.</p>
-            </footer>
-        </main>
-    </div>
+            <h3 class="backend">Backend</h3>
+            <div class="box">
+                <p>Node.js</p>
+                <p>Express.js</p>
+                <p>Databases (MongoDB)</p>
+            </div>
+        </section>
 
-    <!-- TOGGLE MENU & THEME SCRIPT -->
+        <section id="portfolio">
+            <h2 class="personal">Personal Portfolio</h2>
+            <div class="boxes-2">
+                <p>The website you are currently viewing.</p>
+                <p>It showcases my skills, learning journey, and future projects as I grow as a developer.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="upcoming">Upcoming Projects</h2>
+            <div class="boxes-2">
+                <p>Weather App</p>
+                <p>To-Do List</p>
+                <p>Calculator</p>
+                <p>Crypto Dashboard</p>
+            </div>
+        </section>
+
+        <section id="learning">
+            <h2 class="learning">Learning Journey</h2>
+            <div class="boxes-3">
+                <p>I started my web development journey by learning HTML, the foundation of every website.</p>
+                <p>My next step is mastering CSS to create beautiful designs, followed by JavaScript to add interactivity.</p>
+                <p>After that, I plan to learn backend development with Node.js to build complete full-stack applications.</p>
+            </div>
+        </section>
+
+        <section id="goals-section">
+            <h2 class="goals">Goals</h2>
+            <div class="boxes-3">
+                <p>My mission is to become a skilled full-stack developer who creates fast, modern, and accessible web applications.</p>
+                <p>I am committed to continuous learning, improving my problem-solving skills, and building projects that make a real impact.</p>
+            </div>
+        </section>
+
+        <p>
+            <a href="#contact" class="hire-btn">Hire Me</a>
+        </p>
+
+        <footer id="contact">
+            <h2 class="contact-me">Contact Me</h2>
+            <p>Email: fahadsani440@gmail.com</p>
+            <p><a href="https://x.com/skyboy098?s=11" target="_blank">X (Twitter)</a></p>
+            <a href="https://wa.me/2347030863968" target="_blank" class="whatsapp-btn">WhatsApp Me</a>
+            <p>&copy; 2026 Fahad Sani. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- SCRIPTS: HAMBURGER & DARK/LIGHT MODE TOGGLE -->
     <script>
-        // Hamburger Toggle
+        // Hamburger Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
@@ -142,18 +134,11 @@
             navMenu.classList.toggle('active');
         });
 
-        // Close mobile nav menu when a link is clicked
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Dark / Light Mode Toggle
+        // Dark / Light Mode Toggle with LocalStorage Save
         const themeToggleBtn = document.getElementById('theme-toggle');
         const currentTheme = localStorage.getItem('theme');
 
+        // Apply saved theme on page load
         if (currentTheme === 'dark') {
             document.body.classList.add('dark-mode');
             themeToggleBtn.textContent = '☀️';
@@ -170,6 +155,7 @@
                 themeToggleBtn.textContent = '🌙';
             }
             
+            // Save choice in browser memory
             localStorage.setItem('theme', theme);
         });
     </script>
