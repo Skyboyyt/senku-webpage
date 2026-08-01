@@ -12,12 +12,17 @@
         <div class="header-top">
             <h1 id="welcome">Welcome to skyboy web page</h1>
 
-            <!-- HAMBURGER BUTTON -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+            <div class="header-controls">
+                <!-- DARK / LIGHT MODE BUTTON -->
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+
+                <!-- HAMBURGER BUTTON -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
         </div>
 
         <!-- NAVIGATION MENU LINKS -->
@@ -118,14 +123,40 @@
         </footer>
     </main>
 
-    <!-- TOGGLE MENU SCRIPT -->
+    <!-- SCRIPTS: HAMBURGER & DARK/LIGHT MODE TOGGLE -->
     <script>
+        // Hamburger Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
 
         hamburger.addEventListener('click', () => { 
             hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active'); // Fixed variable casing here!
+            navMenu.classList.toggle('active');
+        });
+
+        // Dark / Light Mode Toggle with LocalStorage Save
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        // Apply saved theme on page load
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggleBtn.textContent = '☀️';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            let theme = 'light';
+            if (document.body.classList.contains('dark-mode')) {
+                theme = 'dark';
+                themeToggleBtn.textContent = '☀️';
+            } else {
+                themeToggleBtn.textContent = '🌙';
+            }
+            
+            // Save choice in browser memory
+            localStorage.setItem('theme', theme);
         });
     </script>
 </body>
